@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Priyansh Shrivastava - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0e0e0e;
+            color: white;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff9800;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .nav-links li a:hover {
+            color: #ff9800;
+        }
+
+        #hero {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero-content h2 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            animation: slideIn 1.5s ease-in-out;
+        }
+
+        .hero-content p {
+            font-size: 22px;
+            margin-bottom: 20px;
+            opacity: 0.8;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            background: #ff9800;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+
+        #about {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            padding: 50px;
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        #about h2 {
+            font-size: 40px;
+            color: #ff9800;
+        }
+
+        #about p, #about ul {
+            font-size: 20px;
+            max-width: 700px;
+        }
+
+        #about ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        #about ul li {
+            padding: 8px 0;
+        }
+
+        #projects {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .project-card {
+            padding: 20px;
+            background: #222;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .project-card:hover {
+            transform: scale(1.05);
+        }
+
+        #contact {
+            padding: 50px;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">Priyansh Shrivastava</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="https://github.com/priyansh786213?tab=repositories" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Hi, I'm Priyansh</h2>
+            <p>AI & IoT Enthusiast | Frontend Developer | Blockchain Innovator</p>
+            <a href="#projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Passionate about AI, blockchain, and front-end development. Currently exploring UX/UI design and data engineering.</p>
+        <h3>Achievements</h3>
+        <ul>
+            <li>National-level athlete for 8 years</li>
+            <li>Secured a position in the second round of the V-Comm Hackathon (Top 25 teams in India)</li>
+            <li>Student Treasurer of ACM Student Chapter at VIT Bhopal</li>
+            <li>Completed Google UX/UI Course & Oracle APEX Certification</li>
+            <li>Won the Kalakar poem competition and ranked 110 out of 100,000 participants in a poetry competition</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Blockchain Vault</h3>
+                <p>Securely store photos using MERN stack and blockchain technology.</p>
+            </div>
+            <div class="project-card">
+                <h3>AI Movie Generator</h3>
+                <p>Generate culturally adaptive movies using AI and LLMs.</p>
+            </div>
+            <div class="project-card">
+                <h3>Sign Language Model</h3>
+                <p>An AI-powered model that interprets sign language and converts it to text or speech.</p>
+            </div>
+            <div class="project-card">
+                <h3>Language Translation System</h3>
+                <p>A smart translation tool for seamless communication across different languages.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: priyansh@example.com</p>
+        <p>Phone: +91 XXXXXXXXXX</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/priyanshshrivastava" target="_blank">My LinkedIn</a></p>
+    </section>
+</body>
+</html>
